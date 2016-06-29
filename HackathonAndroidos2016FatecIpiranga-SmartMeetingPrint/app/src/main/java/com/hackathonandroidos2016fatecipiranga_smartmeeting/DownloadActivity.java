@@ -10,7 +10,7 @@ import android.support.annotation.Nullable;
  */
 public class DownloadActivity extends BaseActivity {
 
-    private static final int TIME = 300;
+    private static final int TIME = 30000;
     Handler handler;
 
     @Override
