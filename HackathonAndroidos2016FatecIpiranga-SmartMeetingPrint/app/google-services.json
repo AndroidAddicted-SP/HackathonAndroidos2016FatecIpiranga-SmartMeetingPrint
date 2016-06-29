@@ -1,35 +1,47 @@
 {
   "project_info": {
-    "project_number": "97703557832",
-    "firebase_url": "https://smartmeetingprint.firebaseio.com",
-    "project_id": "smartmeetingprint",
-    "storage_bucket": "smartmeetingprint.appspot.com"
+    "project_number": "369807524664",
+    "firebase_url": "https://smartmeetingclient-2f555.firebaseio.com",
+    "project_id": "smartmeetingclient-2f555",
+    "storage_bucket": "smartmeetingclient-2f555.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:97703557832:android:4dd3e8124bed41da",
+        "mobilesdk_app_id": "1:369807524664:android:45e77559ee589a6b",
         "android_client_info": {
-          "package_name": "com.hackathonandroidos2016fatecipiranga_smartmeeting"
+          "package_name": "addicted.android.hackathonandroidos2016fatecipiranga_smartmeetingclient"
         }
       },
       "oauth_client": [
         {
-          "client_id": "97703557832-pb469a7s23bam3atuiib6apf3oe699bc.apps.googleusercontent.com",
+          "client_id": "369807524664-0l7f0b7o7a3tvluloq84q75nh7l8p6h4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.hackathonandroidos2016fatecipiranga_smartmeeting",
+            "package_name": "addicted.android.hackathonandroidos2016fatecipiranga_smartmeetingclient",
             "certificate_hash": "8C54A299D746F52BF946F5F4D33F461A8A6945B8"
           }
         },
         {
-          "client_id": "97703557832-n2s15n0cevqbsq7tqau4pmp87a29mfbq.apps.googleusercontent.com",
+          "client_id": "369807524664-mfc1f085vb93tqp2rh2esne3o5sdht6e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "addicted.android.hackathonandroidos2016fatecipiranga_smartmeetingclient",
+            "certificate_hash": "904CA6F8C7DF495A66169836F2E0CFA9B2D464D4"
+          }
+        },
+        {
+          "client_id": "369807524664-3i7ve22jv273vuhmr0an26o02399i91r.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "369807524664-24v8tabu9h5o8hcdsul84bbimufnbj5e.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCqchQ5qKPr4txB3T644yRh9Db_wOFk4Zs"
+          "current_key": "AIzaSyCHSN_PudWL2kmZ5nAZ2GLcGKrXgdZ-ZD4"
         }
       ],
       "services": {
@@ -40,10 +52,45 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "97703557832-n2s15n0cevqbsq7tqau4pmp87a29mfbq.apps.googleusercontent.com",
+              "client_id": "369807524664-3i7ve22jv273vuhmr0an26o02399i91r.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369807524664:android:4dd3e8124bed41da",
+        "android_client_info": {
+          "package_name": "com.hackathonandroidos2016fatecipiranga_smartmeeting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369807524664-3i7ve22jv273vuhmr0an26o02399i91r.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "369807524664-24v8tabu9h5o8hcdsul84bbimufnbj5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHSN_PudWL2kmZ5nAZ2GLcGKrXgdZ-ZD4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

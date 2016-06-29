@@ -1,9 +1,8 @@
 package com.hackathonandroidos2016fatecipiranga_smartmeeting;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -62,8 +61,8 @@ public class MainActivity  extends BaseActivity {
 
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReferenceFromUrl("gs://smartmeetingprint.appspot.com");
-        StorageReference pathReference = storageRef.child("documents");
+        StorageReference storageRef = storage.getReferenceFromUrl("gs://smartmeetingclient-2f555.appspot.com");
+        StorageReference pathReference = storageRef.getRoot();
 
         pathReference.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
             @Override
