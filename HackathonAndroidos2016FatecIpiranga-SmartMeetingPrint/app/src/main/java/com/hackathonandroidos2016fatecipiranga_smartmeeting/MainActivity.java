@@ -1,11 +1,13 @@
 package com.hackathonandroidos2016fatecipiranga_smartmeeting;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -25,6 +27,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.io.File;
+
 public class MainActivity  extends BaseActivity implements GoogleApiClient.OnConnectionFailedListener,
         View.OnClickListener{
 
@@ -40,6 +44,7 @@ public class MainActivity  extends BaseActivity implements GoogleApiClient.OnCon
     private GoogleApiClient mGoogleApiClient;
 
     private SignInButton btSignInDefault;
+    private Button btnShowFile;
 
 
     @Override
@@ -63,6 +68,9 @@ public class MainActivity  extends BaseActivity implements GoogleApiClient.OnCon
 
         btSignInDefault = (SignInButton) findViewById(R.id.sign_in_button);
         btSignInDefault.setOnClickListener(this);
+
+        btnShowFile = (Button) findViewById(R.id.btnShowFile);
+        btnShowFile.setOnClickListener(this);
 
         initAPIs();
 
@@ -94,8 +102,10 @@ public class MainActivity  extends BaseActivity implements GoogleApiClient.OnCon
                     GoogleSignInAccount account = result.getSignInAccount();
                     firebaseAuthWithGoogle(account);
                     findViewById(R.id.sign_in_button).setVisibility(View.GONE);
+                    findViewById(R.id.btnShowFile).setVisibility(View.VISIBLE);
                 }else{
                     findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
+                    findViewById(R.id.btnShowFile).setVisibility(View.GONE);
                 }
                 break;
             }
@@ -138,6 +148,8 @@ public class MainActivity  extends BaseActivity implements GoogleApiClient.OnCon
     public void onClick(View view) {
         if(view.getId()==R.id.sign_in_button){
             signIn();
+        }else if(view.getId()==R.id.btnShowFile){
+            openFile();
         }
     }
 
@@ -196,5 +208,20 @@ public class MainActivity  extends BaseActivity implements GoogleApiClient.OnCon
 
         mAuth = FirebaseAuth.getInstance();
 
+    }
+
+
+    private void openFile(){
+        File file = new File("leo.turbiani@gmail.com.pdf");
+        String type = "application/pdf";
+        Intent it = new Intent();
+        it.setAction(android.content.Intent.ACTION_VIEW);
+        it.setDataAndType(Uri.fromFile(file), type);
+        try {
+            startActivity(it);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Aplicativo necessário não encontrado.", Toast.LENGTH_SHORT);
+        }
     }
 }
